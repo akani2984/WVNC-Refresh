@@ -54,11 +54,11 @@
         sudo apt update <br>
         sudo apt install tigervnc* websockify <br>
         vncserver :1 <br>
-        websockify 9001  127.0.0.1:5901 -D <br><br>
+        websockify 9001  127.0.0.1:5901 -D --cert certfile --key keyfile<br><br>
         Client : <br>
         Websocket Path: <br>
-        ws://ip-of-your-server:9001 <br>
-        click Connect.<br>
+        wss://ip-of-your-server:9001 <br>
+        Type your password  and then click Connect.<br>
         bookmark the  page to save the connection.<br>
         <br>
         <a  class="mdui-btn mdui-color-theme-accent mdui-ripple" href="./index.html">Back</a>
@@ -70,11 +70,11 @@
         sudo apt update <br>
         sudo apt install tigervnc* websockify <br>
         vncserver :1 <br>
-        websockify 9001  127.0.0.1:5901 -D <br><br>
+        websockify 9001  127.0.0.1:5901 -D --cert certfile --key keyfile<br><br>
         客户端 : <br>
         Websocket路径: <br>
-        ws://服务端IP:9001 <br>
-        点击链接<br>
+        wss://服务端IP:9001 <br>
+        输入密码，点击链接<br>
         加入页面到书签即可保存链接<br>
         <br>
         <a  class="mdui-btn mdui-color-theme-accent mdui-ripple" href="./index.html">返回</a>
