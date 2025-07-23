@@ -1,5 +1,5 @@
 const cn = {
-    "rightclickbtn": '右击',
+    
     'keyboardbtn' : '键盘',
     'fullscreenbtn': '全屏',
     'PageUpbtn': 'Page UP',
@@ -7,7 +7,7 @@ const cn = {
     'clipbtn': '写剪贴板'
 }
 const en = {
-    "rightclickbtn": 'RightClick',
+    
     'keyboardbtn' : 'Keyboard',
     'fullscreenbtn': 'Fullscreen',
     'PageUpbtn': 'Page UP',

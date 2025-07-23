@@ -1,4 +1,4 @@
-import RFB  from 'https://cdn.jsdelivr.net/gh/novnc/noVNC@1.0.0/core/rfb.js';
+import RFB  from 'https://cdn.jsdelivr.net/gh/novnc/noVNC@1.6.0/core/rfb.js';
 let sfalert;
 let errora;
 let rfb;
@@ -268,13 +268,13 @@ function dis(e) {
 }
 
 if (!hasTouch) {
-            document.getElementById("rightclickbtn").style.display = 'none';
+            
             document.getElementById("keyboardbtn").style.display  = 'none';
             document.getElementById("PageDownbtn").style.display = 'none';
             document.getElementById("PageUpbtn").style.display = 'none';
 }
 
-document.getElementById("rightclickbtn").onclick = sendCtrlAltDel;
+
 document.getElementById("keyboardbtn").onclick = truekeyboard;
 document.getElementById("fullscreenbtn").onclick = fullscreen;
 document.getElementById("PageDownbtn").onclick = keypagedown;
