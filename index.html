@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <meta name="renderer" content="webkit">
+    <!-- MDUI CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css">
+    <title>WVNC Refresh</title>
+  </head>
+  <body class="mdui-appbar-with-toolbar mdui-theme-layout-auto mdui-theme-primary-blue mdui-theme-accent-blue">
+    <div class="mdui-appbar mdui-appbar-fixed">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a href="javascript:;" class="mdui-typo-title">WVNC Refresh</a>
+        </div>
+    </div> 
+    <div id="main" class="mdui-container">
+        <form  action="./vnc.html" method="get">
+            <p id="websocketp"></p>
+            <div class="mdui-textfield">
+                <input class="mdui-textfield-input" name="path" type="text" required/>
+            </div>
+            <p id="usernamep"></p>
+            <div class="mdui-textfield">
+                <input class="mdui-textfield-input" name="username" type="text" />
+            </div>
+            <p id="passp"></p>
+            <div class="mdui-textfield">
+                <input class="mdui-textfield-input" name="pass" type="password"/>
+            </div>
+            <br>
+            <label class="mdui-radio">
+                <input type="radio" name="zoom" value="zoom" checked/>
+                <i class="mdui-radio-icon"></i> 
+                <p style="display: inline;"  id="checkboxzoom"> </p>
+            </label>
+            <br>
+            <label  class="mdui-radio">
+                <input type="radio" name="zoom" value="resize"/>
+                <i class="mdui-radio-icon"></i>
+                <p style="display: inline;" id="checkboxresize"></p>
+            </label>
+            <br><br>
+            <button type="submit" class="mdui-btn mdui-color-theme-accent mdui-ripple">
+                <p style="display: inline;" id="connectbtn"></p>
+            </button>
+            <button id="helpbtn" onclick="help()" class="mdui-btn mdui-color-theme-accent mdui-ripple"></button>
+        </form>
+    </div>
+    <div style="display: none;" id="help_en" class="mdui-container">
+        <br><br>
+        Server: <br>
+        sudo apt update <br>
+        sudo apt install tigervnc* websockify <br>
+        vncserver :1 <br>
+        websockify 9001  127.0.0.1:5901 -D <br><br>
+        Client : <br>
+        Websocket Path: <br>
+        ws://ip-of-your-server:9001 <br>
+        click Connect.<br>
+        bookmark the  page to save the connection.<br>
+        <br>
+        <a  class="mdui-btn mdui-color-theme-accent mdui-ripple" href="./index.html">Back</a>
+    </div>
+     <div style="display: none;" id="help_cn" class="mdui-container">
+        <br><br>
+        服务端: <br>
+        sudo apt update <br>
+        sudo apt install tigervnc* websockify <br>
+        vncserver :1 <br>
+        websockify 9001  127.0.0.1:5901 -D <br><br>
+        客户端 : <br>
+        Websocket路径: <br>
+        ws://服务端IP:9001 <br>
+        点击链接<br>
+        加入页面到书签即可保存链接<br>
+        <br>
+        <a  class="mdui-btn mdui-color-theme-accent mdui-ripple" href="./index.html">返回</a>
+    </div>
+    <script src="./help.js"></script>
+    <script src="./l10n.js"></script>
+    <!-- MDUI JavaScript -->
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+  </body>
+</html>
