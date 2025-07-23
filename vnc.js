@@ -1,4 +1,4 @@
-import RFB  from 'https://cdn.jsdelivr.net/gh/novnc/noVNC@1.6.0/core/rfb.js';
+import RFB  from 'https://cdn.jsdelivr.net/gh/novnc/noVNC@1.0.0/core/rfb.js';
 let sfalert;
 let errora;
 let rfb;
