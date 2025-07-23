@@ -1,6 +1,8 @@
 import RFB  from 'https://cdn.jsdelivr.net/gh/novnc/noVNC@1.6.0/core/rfb.js';
 let sfalert;
+let errora;
 let rfb;
+let keyboard = 0;
 
 const opt = new URLSearchParams(window.location.search);
 const pass = opt.get('pass');
@@ -9,8 +11,8 @@ const zoom = opt.get('zoom');
 const uname = opt.get('username');
 
 
-const cn = ['鉴权失败'];
-const en = ['auth failed.'];
+const cn = ['鉴权失败', '无法连接到服务器'];
+const en = ['auth failed.', 'Connection Failed'];
 
 const aaa = {
                 'SHIF' : '0xffe2',
@@ -253,6 +255,7 @@ function sf() {
 
 function l10n(c) {
     sfalert = c[0];
+    errora = c[1]
 }
 
 function sendCtrlAltDel() {
@@ -260,7 +263,9 @@ function sendCtrlAltDel() {
     return false;
 }
 
-
+function dis(e) {
+    alert(errora)
+}
 
 if (!hasTouch) {
             document.getElementById("rightclickbtn").style.display = 'none';
@@ -287,6 +292,8 @@ if (navigator.language == 'zh-CN') {
 rfb = new RFB(document.body, path, {shared: true, credentials: { password: pass, username: uname} });
 rfb.addEventListener("securityfailure", sf);
 rfb.addEventListener("clipboard", rclip);
+rfb.addEventListener("disconnect", dis);
+
 
 if (zoom == 'zoom') {
     rfb.scaleViewport = true;

@@ -8,7 +8,7 @@
     justify-content: center;
     
 }
-button {
+.button {
     color: rgb(255, 255, 255);
     background-color: rgb(67, 243, 32);
     border-radius: 5px;
