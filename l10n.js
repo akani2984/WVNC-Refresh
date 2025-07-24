@@ -5,7 +5,7 @@ const en = {
     'checkboxresize' : 'Remote Resize (Tigerxvnc only)',
     'connectbtn' : 'Connect',
     'helpbtn': 'Help',
-    'usernamep' : 'Username'
+    'usernamep' : 'Username:'
 };
 const cn = {
     'websocketp' : 'Websocket路径: ',
@@ -14,7 +14,7 @@ const cn = {
     'checkboxresize' : '远程调整大小 (Tigerxvnc)',
     'connectbtn' : '连接',
     'helpbtn': '帮助',
-    'usernamep' : '用户名'
+    'usernamep' : '用户名：'
 };
 async function l10n(l) {
     for (i in l ) {
