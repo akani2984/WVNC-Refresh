@@ -161,7 +161,8 @@ function truekeyboard() {
 
 function firekeyboard(keys, k8, kb) {
     let container = document.getElementById(k8);
-    let kboard = document.getElementById(kb);
+    let kboard = document.getElementById("kboard");
+    let kbele = document.getElementById("kb");
     let drag;
     container.style.display = 'flex';
     container.style.flexWrap = 'nowrap';
@@ -175,7 +176,8 @@ function firekeyboard(keys, k8, kb) {
             container.appendChild(drag);
             drag.addEventListener('touchmove', (e) => {
                 e.preventDefault();
-                kboard.style.top = e.touches[0].clientY + 'px'
+                kboard.style.top = e.touches[0].clientY + 'px';
+                kbele.style.top = e.touches[0].clientY + 'px';
             })
             } else {
                 button.textContent = key;
