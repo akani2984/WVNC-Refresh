@@ -219,7 +219,7 @@ async function maketruekeyboard () {
     firekeyboard(keys3, 'k3');
     firekeyboard(keys4, 'k4');
     firekeyboard(keys5, 'k5');
-    let keys6 = ['DRAG' ,'~', '!', '@', '#' ,'$', '%', '^', '&', '&', '*', '(', ')', '_', 'BACK'];
+    let keys6 = ['DRAG' ,'~', '!', '@', '#' ,'$', '%', '^', '&', '&', '*', '(', ')', '_', '+', 'BACK'];
     let keys7 = ['Q', 'W', 'E' ,'R', 'T', 'Y', 'U', 'I', 'O', 'P', '{', '}', '|'];
     let keys8 = ['A', 'S', 'D' ,'F', 'G', 'H', 'J', 'K', 'L', ':', `"`, 'ENTE'];
     let keys9 = ['Z', 'X', 'C' ,'V', 'B', 'N', 'M', '<', '>', '?'];
